@@ -1,20 +1,20 @@
 package Moves;
 
-import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Stat;
+import ru.ifmo.se.pokemon.StatusMove;
 import ru.ifmo.se.pokemon.Type;
 
-public class RockTomb extends PhysicalMove {
-    public RockTomb(){
-        super(Type.ROCK, 60,95);
+public class Confide extends StatusMove {
+    public Confide(){
+        super(Type.NORMAL, 0,100);
     }
     @Override
     public void applyOppEffects(Pokemon p){
-        p.setMod(Stat.SPEED, -1);
+        p.setMod(Stat.SPECIAL_ATTACK, -1);
     }
     @Override
     protected String describe(){
-        return "кидает камни";
+        return "рассказывает секрет";
     }
 }
